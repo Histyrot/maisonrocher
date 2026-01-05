@@ -25,23 +25,23 @@
 
     <!-- --- PERFORMANCE CRITIQUE --- -->
     
-    <!-- 1. Polices (Priorité Haute) -->
+    <!-- 1. Pré-connexions -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com"> <!-- Aide le CDN Tailwind -->
+
+    <!-- 2. Polices -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     
-    <!-- 2. Images LCP (Priorité Haute) -->
-    <!-- Préchargement des images visibles immédiatement -->
+    <!-- 3. Images LCP (Header) -->
     <link rel="preload" as="image" href="assets/img/fond.png">
     <link rel="preload" as="image" href="assets/img/logo2.png">
 
-    <!-- 3. Tailwind CSS (CDN) -->
+    <!-- 4. Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- 4. FontAwesome (CHARGEMENT DIFFÉRÉ pour Mobile) -->
-    <!-- Astuce: On le charge en "print" (non bloquant) puis on le passe en "all" une fois chargé -->
+    <!-- 5. FontAwesome (Différé) -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <!-- Fallback pour les navigateurs sans JS -->
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
 
     <script>
@@ -73,6 +73,16 @@
             font-family: 'Lato', sans-serif;
             background-color: var(--color-cream);
             color: var(--color-dark);
+            /* Optimisation du rendu texte */
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- OPTIMISATION PERFORMANCE MOBILE --- */
+        /* Empêche le navigateur de calculer le rendu des sections hors écran */
+        section:not(#accueil) {
+            content-visibility: auto;
+            contain-intrinsic-size: 1px 1000px; /* Taille estimée pour éviter le saut de scroll */
         }
 
         h1, h2, h3, h4, .font-serif {
@@ -85,7 +95,7 @@
 
         /* Hero Section Background */
         .hero-bg {
-            background-color: #1a1a1a; /* Couleur de fond par défaut pendant le chargement */
+            background-color: #1a1a1a; 
             background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)), url('assets/img/fond.png');
             background-size: cover;
             background-position: center center; 
@@ -172,7 +182,6 @@
                 
                 <!-- Bouton Mobile -->
                 <div class="md:hidden flex items-center">
-                    <!-- Ajout d'une taille explicite w-10 h-10 pour éviter le saut au chargement de l'icône -->
                     <button id="mobile-menu-btn" class="text-dark hover:text-gold focus:outline-none p-2 w-12 h-12 flex items-center justify-center" aria-label="Ouvrir le menu">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
@@ -193,7 +202,6 @@
     <!-- SECTION: ACCUEIL -->
     <section id="accueil" class="hero-bg min-h-[80vh] md:min-h-[100dvh] flex items-center justify-center text-center px-4 pt-28 md:pt-32">
         <div class="max-w-4xl mx-auto text-white">
-            <!-- Correction LCP Mobile : Remplacement de h-100 (invalide) par h-48 (valide) pour mobile -->
             <img src="assets/img/logo2.png" 
                  alt="Logo Maison Rocher Blanc" 
                  loading="eager"
@@ -226,6 +234,7 @@
                     <div class="absolute -top-4 -left-4 w-full h-full border-2 border-gold z-0 hidden md:block"></div>
                     <img src="assets/img/description.png" 
                          loading="lazy" 
+                         decoding="async"
                          alt="Chef Pâtissier" 
                          width="600" height="400"
                          class="relative z-10 w-full h-auto md:h-auto object-cover shadow-xl rounded-sm">
@@ -264,7 +273,8 @@
                 <div class="flex flex-col md:flex-row gap-8 items-start">
                     <div class="w-full md:w-1/3 order-1 md:order-1">
                         <img src="assets/img/choux.png" 
-                             loading="lazy" 
+                             loading="lazy"
+                             decoding="async" 
                              alt="Choux Craquelins" 
                              width="500" height="350"
                              class="w-full sm:w-4/5 md:w-full mx-auto h-auto md:h-64 object-cover shadow-lg mb-4 rounded-sm">
@@ -352,6 +362,7 @@
                     <div class="w-full md:w-1/3">
                         <img src="assets/img/flan.png" 
                              loading="lazy" 
+                             decoding="async"
                              alt="Flans Pâtissiers" 
                              width="500" height="350"
                              class="w-full sm:w-4/5 md:w-full mx-auto h-auto md:h-64 object-cover shadow-lg mb-4 rounded-sm">
@@ -598,6 +609,7 @@
                 <div class="flex flex-col items-center">
                     <img src="assets/img/logo.png" 
                          loading="lazy" 
+                         decoding="async"
                          alt="Logo Maison Rocher" 
                          width="200" height="150"
                          class="h-48 md:h-80 w-auto object-contain mb-4 transition-all duration-300">
