@@ -6,47 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- --- SÉCURITÉ --- -->
-    <!-- Force le navigateur à ne pas deviner les types MIME (protection XSS) -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <!-- Contrôle des informations envoyées aux sites externes -->
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <!-- Couleur de la barre d'adresse mobile (Intégration visuelle) -->
     <meta name="theme-color" content="#F9F7F2">
 
-    <!-- --- SEO & META DATA --- -->
+    <!-- --- SEO --- -->
     <title>Maison ROCHER - Pâtissier Artisan à Linas (91)</title>
     <meta name="description" content="Maison ROCHER à Linas (91) - Pâtisserie fine, gâteaux sur mesure et traiteur. Découvrez nos douceurs artisanales 100% fait maison en Essonne.">
     <link rel="canonical" href="https://maisonrocher.jk-alliance.com">
-    
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/img/logo.png">
 
-    <!-- --- SOCIAL MEDIA TAGS (Open Graph) --- -->
+    <!-- --- OPEN GRAPH --- -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://maisonrocher.jk-alliance.com">
     <meta property="og:title" content="Maison ROCHER - Pâtissier Artisan">
     <meta property="og:description" content="Pâtisserie fine et traiteur à Linas. Découvrez nos créations 100% fait maison.">
     <meta property="og:image" content="https://maisonrocher.jk-alliance.com/assets/img/logo2.png">
 
-    <!-- --- PERFORMANCE & RESSOURCES --- -->
+    <!-- --- PERFORMANCE CRITIQUE --- -->
     
-    <!-- 1. Polices (Chargement rapide) -->
+    <!-- 1. Polices (Priorité Haute) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     
-    <!-- 2. Pré-connexion pour les icônes -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-
-    <!-- 3. Images Critiques (Preload LCP) -->
+    <!-- 2. Images LCP (Priorité Haute) -->
+    <!-- Préchargement des images visibles immédiatement -->
     <link rel="preload" as="image" href="assets/img/fond.png">
     <link rel="preload" as="image" href="assets/img/logo2.png">
 
-    <!-- 4. Frameworks CSS -->
+    <!-- 3. Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
-    <!-- Configuration Tailwind -->
+    <!-- 4. FontAwesome (CHARGEMENT DIFFÉRÉ pour Mobile) -->
+    <!-- Astuce: On le charge en "print" (non bloquant) puis on le passe en "all" une fois chargé -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <!-- Fallback pour les navigateurs sans JS -->
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+
     <script>
         tailwind.config = {
             theme: {
@@ -65,9 +62,7 @@
         }
     </script>
 
-    <!-- Custom CSS -->
     <style>
-        /* Variables & Reset */
         :root {
             --color-gold: #D4AF37;
             --color-dark: #2C2C2C;
@@ -80,7 +75,6 @@
             color: var(--color-dark);
         }
 
-        /* Typography */
         h1, h2, h3, h4, .font-serif {
             font-family: 'Playfair Display', serif;
         }
@@ -91,11 +85,11 @@
 
         /* Hero Section Background */
         .hero-bg {
-            background-color: #1a1a1a; 
+            background-color: #1a1a1a; /* Couleur de fond par défaut pendant le chargement */
             background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)), url('assets/img/fond.png');
-            background-size: cover, cover;
+            background-size: cover;
             background-position: center center; 
-            background-repeat: no-repeat, no-repeat;
+            background-repeat: no-repeat;
             background-attachment: fixed;
         }
 
@@ -103,12 +97,10 @@
         @media (hover: none) and (pointer: coarse) {
             .hero-bg { 
                 background-attachment: scroll; 
-                background-size: cover; 
                 background-position: center top;
             }
         }
         
-        /* Animations & Interactions */
         .menu-card { 
             transition: transform 0.3s ease, box-shadow 0.3s ease; 
         }
@@ -118,7 +110,6 @@
         }
     </style>
     
-    <!-- Données Structurées (Schema.org) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -164,7 +155,6 @@
                 
                 <!-- Logo Nav -->
                 <div class="absolute top-0 left-0 h-full flex items-start z-50 -ml-4 md:-ml-80 -mt-3 md:-mt-10">
-                    <!-- Dimensions ajoutées pour éviter le CLS -->
                     <img src="assets/img/logo.png" 
                          alt="Logo Maison Rocher" 
                          width="150" height="150"
@@ -182,7 +172,8 @@
                 
                 <!-- Bouton Mobile -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-dark hover:text-gold focus:outline-none p-2" aria-label="Ouvrir le menu">
+                    <!-- Ajout d'une taille explicite w-10 h-10 pour éviter le saut au chargement de l'icône -->
+                    <button id="mobile-menu-btn" class="text-dark hover:text-gold focus:outline-none p-2 w-12 h-12 flex items-center justify-center" aria-label="Ouvrir le menu">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
                 </div>
@@ -202,13 +193,13 @@
     <!-- SECTION: ACCUEIL -->
     <section id="accueil" class="hero-bg min-h-[80vh] md:min-h-[100dvh] flex items-center justify-center text-center px-4 pt-28 md:pt-32">
         <div class="max-w-4xl mx-auto text-white">
-            <!-- Image prioritaire (LCP) avec dimensions explicites -->
+            <!-- Correction LCP Mobile : Remplacement de h-100 (invalide) par h-48 (valide) pour mobile -->
             <img src="assets/img/logo2.png" 
                  alt="Logo Maison Rocher Blanc" 
                  loading="eager"
                  fetchpriority="high"
                  width="400" height="300"
-                 class="h-100 md:h-[50rem] w-auto mx-auto animate-fade-in-up object-contain opacity-95 transform -translate-y-10 translate-x-4 relative z-0">
+                 class="h-48 md:h-[50rem] w-auto mx-auto animate-fade-in-up object-contain opacity-95 transform -translate-y-10 translate-x-4 relative z-0">
             
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-6 leading-tight relative -mt-20 md:-mt-32 z-10 drop-shadow-xl">
                 Pâtisseries &<br>
@@ -233,7 +224,6 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
                 <div class="relative order-2 md:order-1 mt-8 md:mt-0">
                     <div class="absolute -top-4 -left-4 w-full h-full border-2 border-gold z-0 hidden md:block"></div>
-                    <!-- Dimensions approximatives ajoutées pour ratio -->
                     <img src="assets/img/description.png" 
                          loading="lazy" 
                          alt="Chef Pâtissier" 
