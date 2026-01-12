@@ -1,49 +1,56 @@
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
+<html lang="fr" class="scroll-smooth scroll-pt-24">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- --- SÉCURITÉ --- -->
+    <!-- =========================================
+         1. SÉCURITÉ & MÉTADONNÉES TECHNIQUES
+    ========================================== -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="theme-color" content="#F9F7F2">
 
-    <!-- --- SEO --- -->
-    <title>Maison ROCHER - Pâtissier Artisan à Linas (91)</title>
-    <meta name="description" content="Maison ROCHER à Linas (91) - Pâtisserie fine, gâteaux sur mesure et traiteur. Découvrez nos douceurs artisanales 100% fait maison en Essonne.">
+    <!-- =========================================
+         2. SEO & VISIBILITÉ GOOGLE (OPTIMISÉ)
+    ========================================== -->
+    <!-- Titre Stratégique : Nom + Métier + Ville Principale -->
+    <title>Maison ROCHER - Pâtissier & Traiteur Artisan à Linas (91)</title>
+    
+    <!-- Description Optimisée pour le clic (CTR) -->
+    <meta name="description" content="Maison ROCHER à Linas (91) : Votre artisan pâtissier et traiteur en Essonne. Entremets, choux craquelins, flans crémeux, tartes et buffets 100% fait maison.">
+    
+    <!-- Liste étendue de Mots-clés (SEO) - Produits réels uniquement -->
+    <meta name="keywords" content="Maison Rocher, Maison Rocher Traiteur, Maison Rocher Pâtisserie, Pâtissier Linas, Traiteur Essonne, Traiteur 91, Choux craquelins, Flans pâtissiers, Entremets chocolat, Tartes aux fruits, Buffet froid entreprise, Cocktail dînatoire 91, Gâteau anniversaire Linas, Pâtisserie artisanale, Traiteur événementiel, Pâtisserie fine Montlhéry, Marcoussis, Longpont-sur-Orge, Sainte-Geneviève-des-Bois, Plateau repas entreprise 91">
+
+    <!-- URL Canonique -->
     <link rel="canonical" href="https://maisonrocher.jk-alliance.com">
     <link rel="icon" type="image/png" href="assets/img/logo.png">
 
-    <!-- --- OPEN GRAPH --- -->
+    <!-- Open Graph (Facebook/WhatsApp/LinkedIn) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://maisonrocher.jk-alliance.com">
-    <meta property="og:title" content="Maison ROCHER - Pâtissier Artisan">
-    <meta property="og:description" content="Pâtisserie fine et traiteur à Linas. Découvrez nos créations 100% fait maison.">
+    <meta property="og:title" content="Maison ROCHER - Artisan Pâtissier & Traiteur Linas">
+    <meta property="og:description" content="Pâtisserie fine et traiteur événementiel. Découvrez l'excellence artisanale à Linas (91).">
     <meta property="og:image" content="https://maisonrocher.jk-alliance.com/assets/img/logo2.png">
 
-    <!-- --- PERFORMANCE CRITIQUE --- -->
-    
-    <!-- 1. Pré-connexions -->
+    <!-- =========================================
+         3. PERFORMANCE & RESSOURCES
+    ========================================== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.tailwindcss.com"> <!-- Aide le CDN Tailwind -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
 
-    <!-- 2. Polices -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    
-    <!-- 3. Images LCP (Header) -->
+    <!-- Pré-chargement des images critiques -->
     <link rel="preload" as="image" href="assets/img/fond.png">
     <link rel="preload" as="image" href="assets/img/logo2.png">
 
-    <!-- 4. Tailwind CSS (CDN) -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Polices -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     
-    <!-- 5. FontAwesome (Différé) -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
-
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -61,7 +68,12 @@
             }
         }
     </script>
+    
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
 
+    <!-- Styles Personnalisés -->
     <style>
         :root {
             --color-gold: #D4AF37;
@@ -73,27 +85,21 @@
             font-family: 'Lato', sans-serif;
             background-color: var(--color-cream);
             color: var(--color-dark);
-            /* Optimisation du rendu texte */
             text-rendering: optimizeLegibility;
             -webkit-font-smoothing: antialiased;
-        }
-
-        /* --- OPTIMISATION PERFORMANCE MOBILE --- */
-        /* Empêche le navigateur de calculer le rendu des sections hors écran */
-        section:not(#accueil) {
-            content-visibility: auto;
-            contain-intrinsic-size: 1px 1000px; /* Taille estimée pour éviter le saut de scroll */
         }
 
         h1, h2, h3, h4, .font-serif {
             font-family: 'Playfair Display', serif;
         }
 
-        .text-gold { color: var(--color-gold); }
-        .bg-gold { background-color: var(--color-gold); }
-        .border-gold { border-color: var(--color-gold); }
+        /* Optimisation du rendu */
+        section:not(#accueil) {
+            content-visibility: auto;
+            contain-intrinsic-size: 1px 1000px;
+        }
 
-        /* Hero Section Background */
+        /* Background Hero */
         .hero-bg {
             background-color: #1a1a1a; 
             background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)), url('assets/img/fond.png');
@@ -103,7 +109,6 @@
             background-attachment: fixed;
         }
 
-        /* Mobile Responsiveness for Hero */
         @media (hover: none) and (pointer: coarse) {
             .hero-bg { 
                 background-attachment: scroll; 
@@ -111,25 +116,46 @@
             }
         }
         
-        .menu-card { 
-            transition: transform 0.3s ease, box-shadow 0.3s ease; 
-        }
-        .menu-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        /* Styles Instagram Cross-Fade */
+        .insta-slot img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     </style>
     
+    <!-- =========================================
+         4. DONNÉES STRUCTURÉES (SCHEMA.ORG)
+         Optimisation locale maximale pour "Maison Rocher Linas"
+    ========================================== -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Bakery",
+      "@type": ["Bakery", "FoodEstablishment", "Caterer"],
       "name": "Maison Rocher",
-      "image": "https://maisonrocher.jk-alliance.com/assets/img/logo2.png",
-      "description": "Pâtisserie fine artisanale et traiteur à Linas. Gâteaux sur mesure, choux, flans et créations 100% fait maison.",
+      "alternateName": [
+          "Maison Rocher Linas", 
+          "Traiteur Rocher", 
+          "Pâtisserie Rocher", 
+          "M. Rocher",
+          "Maison Rocher Traiteur",
+          "Maison Rocher Pâtisserie"
+      ],
       "url": "https://maisonrocher.jk-alliance.com",
+      "logo": "https://maisonrocher.jk-alliance.com/assets/img/logo2.png",
+      "image": [
+        "https://maisonrocher.jk-alliance.com/assets/img/choux.png",
+        "https://maisonrocher.jk-alliance.com/assets/img/flan.png"
+       ],
+      "description": "Maison Rocher : Artisan Pâtissier et Traiteur à Linas (91). Spécialiste des événements en Essonne et Île-de-France.",
       "telephone": "+33628655206",
+      "email": "rochertraiteur@gmail.com",
       "priceRange": "€€",
+      "servesCuisine": ["Pâtisserie Française", "Traiteur", "Artisanal", "Buffet", "Cocktail", "Entremets", "Tartes", "Flans"],
+      "keywords": "Maison Rocher, Maison Rocher Traiteur, Pâtissier Linas, Traiteur Linas, Maison Rocher Pâtisserie, Traiteur Essonne, Choux craquelins, Flans pâtissiers, Entremets, Buffet Mariage 91, Traiteur Entreprise Essonne",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "6 Chemin de la Grâce de Dieu",
@@ -142,31 +168,47 @@
         "latitude": 48.6318,
         "longitude": 2.2694
       },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Saturday", "Sunday"],
-          "opens": "08:00",
-          "closes": "13:00"
-        }
+      "areaServed": [
+        { "@type": "City", "name": "Linas" },
+        { "@type": "AdministrativeArea", "name": "Essonne" },
+        { "@type": "AdministrativeArea", "name": "Paris" },
+        { "@type": "AdministrativeArea", "name": "Yvelines" },
+        { "@type": "AdministrativeArea", "name": "Hauts-de-Seine" },
+        { "@type": "AdministrativeArea", "name": "Val-de-Marne" },
+        { "@type": "AdministrativeArea", "name": "Seine-et-Marne" },
+        { "@type": "AdministrativeArea", "name": "Eure-et-Loir" },
+        { "@type": "AdministrativeArea", "name": "Loiret" }
       ],
       "sameAs": [
-        "https://instagram.com/m.rocher2022"
-      ]
+        "https://instagram.com/m.rocher2022",
+        "https://www.facebook.com/p/MRocher-100087912335771/?locale=fr_FR"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Carte Maison Rocher",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Choux Craquelins" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Flans Pâtissiers" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Entremets Chocolat & Fruits" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Traiteur Mariage Essonne" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Buffet Entreprise 91" } }
+        ]
+      }
     }
     </script>
 </head>
-<body class="antialiased">
+
+<body class="antialiased overflow-x-hidden">
 
     <!-- NAVIGATION -->
     <nav class="bg-cream shadow-md fixed w-full z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-end h-14 md:h-24 relative">
                 
-                <!-- Logo Nav -->
+                <!-- Logo Nav : RETOUR AU STYLE INITIAL (Débordant & Imposant) -->
                 <div class="absolute top-0 left-0 h-full flex items-start z-50 -ml-4 md:-ml-80 -mt-3 md:-mt-10">
                     <img src="assets/img/logo.png" 
-                         alt="Logo Maison Rocher" 
+                         alt="Logo Maison Rocher - Pâtissier Traiteur Linas" 
                          width="150" height="150"
                          class="h-full w-auto object-contain transform scale-[2.1] md:scale-[2.5] origin-top-left transition-transform duration-300">
                 </div>
@@ -174,7 +216,7 @@
                 <!-- Menu Desktop -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#accueil" class="text-dark hover:text-gold transition duration-300 uppercase text-xs tracking-widest font-bold">Accueil</a>
-                    <a href="#philosophie" class="text-dark hover:text-gold transition duration-300 uppercase text-xs tracking-widest font-bold">La Maison</a>
+                    <a href="#philosophie" class="text-dark hover:text-gold transition duration-300 uppercase text-xs tracking-widest font-bold">Savoir-Faire</a>
                     <a href="#produits" class="text-dark hover:text-gold transition duration-300 uppercase text-xs tracking-widest font-bold">Notre Carte</a>
                     <a href="#marches" class="text-dark hover:text-gold transition duration-300 uppercase text-xs tracking-widest font-bold">Où nous trouver</a>
                     <a href="#contact" class="px-4 py-2 border border-dark hover:bg-dark hover:text-white transition duration-300 uppercase text-xs tracking-widest font-bold">Contact</a>
@@ -192,32 +234,35 @@
         <!-- Menu Mobile Panel -->
         <div id="mobile-menu" class="hidden md:hidden bg-cream border-t border-gold absolute w-full shadow-lg">
             <a href="#accueil" class="block py-4 px-4 text-sm font-bold uppercase tracking-widest hover:bg-white text-center border-b border-gray-100 mobile-link">Accueil</a>
-            <a href="#philosophie" class="block py-4 px-4 text-sm font-bold uppercase tracking-widest hover:bg-white text-center border-b border-gray-100 mobile-link">La Maison</a>
+            <a href="#philosophie" class="block py-4 px-4 text-sm font-bold uppercase tracking-widest hover:bg-white text-center border-b border-gray-100 mobile-link">Savoir-Faire</a>
             <a href="#produits" class="block py-4 px-4 text-sm font-bold uppercase tracking-widest hover:bg-white text-center border-b border-gray-100 mobile-link">Notre Carte</a>
             <a href="#marches" class="block py-4 px-4 text-sm font-bold uppercase tracking-widest hover:bg-white text-center border-b border-gray-100 mobile-link">Où nous trouver</a>
             <a href="#contact" class="block py-4 px-4 text-sm font-bold uppercase tracking-widest bg-dark text-white text-center mobile-link">Contact</a>
         </div>
     </nav>
 
-    <!-- SECTION: ACCUEIL -->
+    <!-- SECTION 1: ACCUEIL -->
     <section id="accueil" class="hero-bg min-h-[80vh] md:min-h-[100dvh] flex items-center justify-center text-center px-4 pt-28 md:pt-32">
-        <div class="max-w-4xl mx-auto text-white">
+        <div class="max-w-4xl mx-auto text-white relative z-10">
+            <!-- Logo Central Hero -->
             <img src="assets/img/logo2.png" 
-                 alt="Logo Maison Rocher Blanc" 
+                 alt="Maison Rocher Linas" 
                  loading="eager"
-                 fetchpriority="high"
                  width="400" height="300"
                  class="h-90 md:h-[50rem] w-auto mx-auto animate-fade-in-up object-contain opacity-95 transform -translate-y-10 translate-x-3 md:translate-x-4 relative z-0">
             
+            <!-- H1 Optimisé SEO -->
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-6 leading-tight relative -mt-20 md:-mt-32 z-10 drop-shadow-xl">
-                Pâtisseries &<br>
-                <span class="italic font-light">Gourmandises</span>
+                <span class="sr-only">Maison Rocher Linas </span>
+                Pâtissier &<br>
+                <span class="italic font-light">Traiteur</span>
             </h1>
             
             <div class="w-16 md:w-24 h-1 bg-gold mx-auto mb-6 md:mb-8 relative z-10"></div>
             
+            <!-- Paragraphe nettoyé -->
             <p class="text-base md:text-xl font-light mb-8 md:mb-10 max-w-2xl mx-auto opacity-90 px-4 relative z-10">
-                La certitude d'avoir des douceurs artisanales 100% "fait maison".
+                L'excellence artisanale à Linas en Essonne. Pâtisseries fines et service traiteur 100% fait maison.
             </p>
             
             <a href="#produits" class="inline-block bg-gold text-white px-6 md:px-8 py-3 uppercase tracking-widest text-xs md:text-sm font-bold hover:bg-white hover:text-gold transition duration-300 shadow-lg relative z-10">
@@ -226,40 +271,60 @@
         </div>
     </section>
 
-    <!-- SECTION: PHILOSOPHIE -->
+    <!-- SECTION 2: PHILOSOPHIE -->
     <section id="philosophie" class="py-12 md:py-20 bg-cream">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <!-- Image -->
                 <div class="relative order-2 md:order-1 mt-8 md:mt-0">
                     <div class="absolute -top-4 -left-4 w-full h-full border-2 border-gold z-0 hidden md:block"></div>
                     <img src="assets/img/description.png" 
                          loading="lazy" 
-                         decoding="async"
-                         alt="Chef Pâtissier" 
+                         alt="Savoir-faire artisan Pâtissier Maison Rocher Linas" 
                          width="600" height="400"
                          class="relative z-10 w-full h-auto md:h-auto object-cover shadow-xl rounded-sm">
                 </div>
                 
+                <!-- Texte -->
                 <div class="text-center md:text-left order-1 md:order-2">
-                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-dark mb-4 md:mb-6">L'Art de la Gourmandise</h2>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-dark mb-4 md:mb-6">Maison Rocher : L'Art de la Gourmandise</h2>
                     <p class="text-gold italic text-lg mb-4 md:mb-6">"La passion de créer et d'innover."</p>
-                    <p class="text-gray-600 mb-4 md:mb-6 leading-relaxed text-sm md:text-base">
-                        Chez Maison Rocher, nous vous offrons des produits frais et des chocolats de grande qualité. 
-                        Notre promesse est simple : des douceurs artisanales <strong>100% "fait maison"</strong>.
-                    </p>
-                    <p class="text-gray-600 mb-6 md:mb-8 leading-relaxed text-sm md:text-base">
-                        Nous apportons un soin particulier à nos matières premières. Tous nos produits à base de vanille sont fabriqués uniquement avec de la <strong>gousse de vanille de Madagascar</strong>, et nos saveurs fruitées sont réalisées avec nos confitures maison.
-                    </p>
-                    <div class="flex items-center justify-center md:justify-start space-x-4">
-                        <i class="fas fa-check-circle text-gold"></i>
-                        <span class="uppercase tracking-widest text-sm font-bold">100% Fait Maison</span>
+                    
+                    <div class="space-y-5 text-gray-600 text-sm md:text-base leading-relaxed">
+                        <p>
+                            Située au cœur de <strong>Linas (91)</strong>, la <strong>Maison Rocher</strong> incarne l'alliance parfaite entre tradition pâtissière et créativité moderne. Notre signature ? Une fabrication <strong>100% fait maison</strong>, sans compromis sur la qualité.
+                        </p>
+                        
+                        <p>
+                            <strong>Pâtisserie Fine :</strong> De nos choux craquelins incontournables à nos entremets raffinés, chaque création est façonnée dans notre atelier. Nous sélectionnons rigoureusement nos matières premières : gousses de <strong>vanille de Madagascar</strong>, chocolats grands crus et fruits frais de saison.
+                        </p>
+
+                        <p>
+                            <!-- Texte Départements Simplifié -->
+                            <strong>Traiteur & Événementiel :</strong> Maison Rocher est votre partenaire privilégié pour vos moments d'exception en <strong>Essonne (91) et départements limitrophes</strong>. Mariages, baptêmes, repas d'entreprise ou cocktails : nous déclinons notre savoir-faire salé et sucré pour sublimer vos réceptions.
+                        </p>
+                    </div>
+
+                    <div class="mt-6 md:mt-8 flex flex-wrap gap-4 justify-center md:justify-start">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check-circle text-gold"></i>
+                            <span class="uppercase tracking-widest text-xs font-bold">100% Fait Maison</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-glass-cheers text-gold"></i>
+                            <span class="uppercase tracking-widest text-xs font-bold">Traiteur Événementiel</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-map-marker-alt text-gold"></i>
+                            <span class="uppercase tracking-widest text-xs font-bold">Linas & Île-de-France</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION: CARTE -->
+    <!-- SECTION 3: LA CARTE -->
     <section id="produits" class="py-12 md:py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-10 md:mb-16">
@@ -268,29 +333,32 @@
                 <p class="mt-4 text-gray-500 italic text-sm md:text-base">Commandez vos douceurs préférées</p>
             </div>
 
-            <!-- Catégorie: CHOUX -->
+            <!-- Sous-Section: CHOUX -->
             <div class="mb-16 md:mb-20">
                 <div class="flex flex-col md:flex-row gap-8 items-start">
                     <div class="w-full md:w-1/3 order-1 md:order-1">
                         <img src="assets/img/choux.png" 
                              loading="lazy"
-                             decoding="async" 
-                             alt="Choux Craquelins" 
+                             alt="Plateau de Choux Craquelins Maison Rocher Linas" 
                              width="500" height="350"
                              class="w-full sm:w-4/5 md:w-full mx-auto h-auto md:h-64 object-cover shadow-lg mb-4 rounded-sm">
+                        
+                        <!-- Tableau des Prix Choux -->
                         <div class="bg-dark text-white p-5 md:p-6 text-center rounded-sm sm:w-4/5 md:w-full mx-auto">
                             <h3 class="text-xl font-serif font-bold text-gold mb-4">Tarifs Choux</h3>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-sm opacity-90 text-left">
-                                <div class="flex justify-between border-b border-gray-700 pb-1"><span>3 pièces</span> <span>6,60 €</span></div>
-                                <div class="flex justify-between border-b border-gray-700 pb-1"><span>4 pièces</span> <span>8,80 €</span></div>
-                                <div class="flex justify-between border-b border-gray-700 pb-1"><span>6 pièces</span> <span>13,20 €</span></div>
-                                <div class="flex justify-between border-b border-gray-700 pb-1"><span>9 pièces</span> <span>19,80 €</span></div>
-                                <div class="flex justify-between border-b border-gray-700 pb-1"><span>12 pièces</span> <span>26,40 €</span></div>
-                                <div class="flex justify-between border-b border-gray-700 pb-1"><span>16 pièces</span> <span>35,20 €</span></div>
-                                <div class="flex justify-between border-b border-gray-700 pb-1"><span>25 pièces</span> <span>55,00 €</span></div>
-                                <div class="flex justify-between border-b border-gray-700 pb-1"><span>50 pièces</span> <span>105,00 €</span></div>
-                                <div class="flex justify-between border-b border-gray-700 pb-1"><span>75 pièces</span> <span>157,50 €</span></div>
-                                <div class="flex justify-between border-b border-gray-700 pb-1"><span>100 pièces</span> <span>200,00 €</span></div>
+                                <div class="flex justify-between border-b border-gray-700 pb-1"><span>3 pièces</span> <span>6,90 €</span></div>
+                                <div class="flex justify-between border-b border-gray-700 pb-1"><span>4 pièces</span> <span>9,20 €</span></div>
+                                <div class="flex justify-between border-b border-gray-700 pb-1"><span>6 pièces</span> <span>13,80 €</span></div>
+                                <div class="flex justify-between border-b border-gray-700 pb-1"><span>9 pièces</span> <span>20,70 €</span></div>
+                                <div class="flex justify-between border-b border-gray-700 pb-1"><span>12 pièces</span> <span>27,60 €</span></div>
+                                <div class="flex justify-between border-b border-gray-700 pb-1"><span>16 pièces</span> <span>36,80 €</span></div>
+                                <div class="flex justify-between border-b border-gray-700 pb-1"><span>25 pièces</span> <span>57,00 €</span></div>
+                                <div class="flex justify-between border-b border-gray-700 pb-1"><span>50 pièces</span> <span>110,00 €</span></div>
+                                <div class="flex justify-between border-b border-gray-700 pb-1 col-span-1 sm:col-span-2 mt-2">
+                                    <span class="font-bold text-gold">+ 50 pièces</span> 
+                                    <span class="font-bold text-gold uppercase tracking-widest">Sur Devis</span>
+                                </div>
                             </div>
                             <p class="text-xs mt-4 text-gray-400 italic">12 pièces minimum par saveur (hors marché)</p>
                         </div>
@@ -300,7 +368,7 @@
                         <h3 class="text-2xl md:text-3xl font-serif font-bold text-dark mb-4 md:mb-6 border-b-2 border-gold inline-block pb-2">Les Choux Craquelins</h3>
                         
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                            <!-- Classiques -->
+                            <!-- Parfums Classiques -->
                             <div class="space-y-2">
                                 <h4 class="font-bold text-white bg-gold px-2 py-1 inline-block text-sm uppercase tracking-wide rounded-sm">Les Classiques</h4>
                                 <ul class="text-gray-600 text-sm space-y-1 pl-2 border-l-2 border-gray-100">
@@ -313,7 +381,7 @@
                                 </ul>
                             </div>
                             
-                            <!-- Gourmands -->
+                            <!-- Parfums Gourmands -->
                             <div class="space-y-2">
                                 <h4 class="font-bold text-white bg-gold px-2 py-1 inline-block text-sm uppercase tracking-wide rounded-sm">Les Gourmands</h4>
                                 <ul class="text-gray-600 text-sm space-y-1 pl-2 border-l-2 border-gray-100">
@@ -327,7 +395,7 @@
                                 </ul>
                             </div>
 
-                            <!-- Rochers -->
+                            <!-- Parfums Rochers -->
                              <div class="space-y-2">
                                 <h4 class="font-bold text-white bg-gold px-2 py-1 inline-block text-sm uppercase tracking-wide rounded-sm">Les Rochers</h4>
                                 <ul class="text-gray-600 text-sm space-y-1 pl-2 border-l-2 border-gray-100">
@@ -339,7 +407,7 @@
                             </div>
                         </div>
                         
-                        <!-- Saisonniers -->
+                        <!-- Parfums Saisonniers -->
                         <div class="mt-8 p-5 bg-cream border border-gold rounded-sm relative">
                             <span class="absolute -top-3 left-4 bg-white px-2 text-gold font-bold text-sm uppercase border border-gold rounded-sm">En Saison Uniquement</span>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-700 mt-2">
@@ -356,14 +424,13 @@
                 </div>
             </div>
 
-            <!-- Catégorie: FLANS -->
+            <!-- Sous-Section: FLANS -->
             <div class="mb-16 md:mb-20">
                  <div class="flex flex-col md:flex-row gap-8 items-start">
                     <div class="w-full md:w-1/3">
                         <img src="assets/img/flan.png" 
                              loading="lazy" 
-                             decoding="async"
-                             alt="Flans Pâtissiers" 
+                             alt="Flans Pâtissiers crémeux Maison Rocher" 
                              width="500" height="350"
                              class="w-full sm:w-4/5 md:w-full mx-auto h-auto md:h-64 object-cover shadow-lg mb-4 rounded-sm">
                          <div class="bg-cream border border-gold p-6 text-center rounded-sm sm:w-4/5 md:w-full mx-auto">
@@ -391,7 +458,7 @@
                                 <span class="text-gold font-bold text-base md:text-lg">5,50 €</span>
                             </div>
                             <div class="flex justify-between border-b border-gray-100 py-1 items-end">
-                                <span class="font-bold text-gray-700 text-sm md:text-base">Coco Praliné Coco</span>
+                                <span class="font-bold text-gray-700 text-sm md:text-base">Coco Praliné</span>
                                 <span class="text-gold font-bold text-base md:text-lg">5,50 €</span>
                             </div>
                             <div class="flex justify-between border-b border-gray-100 py-1 items-end">
@@ -402,26 +469,32 @@
                                 <span class="font-bold text-gray-700 text-sm md:text-base">Pistache</span>
                                 <span class="text-gold font-bold text-base md:text-lg">6,00 €</span>
                             </div>
+                            <div class="flex justify-between border-b border-gray-100 py-1 items-end">
+                                <span class="font-bold text-gray-700 text-sm md:text-base">Praliné</span>
+                                <span class="text-gold font-bold text-base md:text-lg">6,00 €</span>
+                            </div>
+                            <div class="flex justify-between border-b border-gray-100 py-1 items-end">
+                                <span class="font-bold text-gray-700 text-sm md:text-base">Chocolat Dulcey / lait</span>
+                                <span class="text-gold font-bold text-base md:text-lg">5,50 €</span>
+                            </div>
                         </div>
 
                         <div class="mt-8 bg-gray-50 p-4 border-l-4 border-gold rounded-sm">
                             <h4 class="font-bold text-dark uppercase text-xs tracking-wide mb-3">En Saison Uniquement</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-sm">
-                                <div class="flex justify-between"><span class="text-gray-600">Praliné</span> <span class="font-bold">6,00 €</span></div>
                                 <div class="flex justify-between"><span class="text-gray-600">Vanille Fraise</span> <span class="font-bold">5,50 €</span></div>
                                 <div class="flex justify-between"><span class="text-gray-600">Vanille Framboise</span> <span class="font-bold">5,50 €</span></div>
                                 <div class="flex justify-between"><span class="text-gray-600">Vanille Myrtille</span> <span class="font-bold">5,50 €</span></div>
-                                <div class="flex justify-between"><span class="text-gray-600">Chocolat Dulcey / Lait</span> <span class="font-bold">5,50 €</span></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Catégorie: ENTREMETS & TARTES -->
+            <!-- Sous-Section: ENTREMETS & TARTES -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 
-                <!-- Entremets -->
+                <!-- Bloc Entremets -->
                 <div class="bg-white p-6 md:p-8 shadow-xl border-t-4 border-gold relative rounded-sm">
                     <div class="absolute top-0 right-0 bg-gold text-white px-3 py-1 text-xs font-bold uppercase rounded-bl-sm">Sur Commande</div>
                     <h3 class="text-2xl font-serif font-bold text-dark mb-6 text-center">Les Entremets</h3>
@@ -468,7 +541,7 @@
                     </div>
                 </div>
 
-                <!-- Tartes -->
+                <!-- Bloc Tartes -->
                 <div class="bg-white p-6 md:p-8 shadow-xl border-t-4 border-gold relative rounded-sm">
                     <div class="absolute top-0 right-0 bg-gold text-white px-3 py-1 text-xs font-bold uppercase rounded-bl-sm">Format 8 parts</div>
                     <h3 class="text-2xl font-serif font-bold text-dark mb-6 text-center">Les Tartes à Partager</h3>
@@ -513,7 +586,7 @@
                 </div>
             </div>
             
-            <!-- Informations Commandes -->
+            <!-- Informations Logistiques -->
             <div class="mt-12 md:mt-16 bg-dark text-white p-6 md:p-8 rounded-sm text-center border border-gold relative overflow-hidden">
                 <div class="relative z-10">
                     <h3 class="text-xl md:text-2xl font-serif font-bold text-gold mb-4">Informations Commandes</h3>
@@ -539,7 +612,7 @@
         </div>
     </section>
 
-    <!-- SECTION: MARCHÉS -->
+    <!-- SECTION 4: MARCHÉS & LOCALISATION -->
     <section id="marches" class="py-12 md:py-20 bg-cream relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-8 md:mb-12">
@@ -590,7 +663,7 @@
                     </div>
                 </div>
 
-                <!-- Atelier -->
+                <!-- Atelier / Retrait -->
                 <div class="bg-dark text-white p-8 md:p-12 shadow-2xl relative flex flex-col justify-center items-center text-center rounded-sm">
                     <i class="fas fa-map-marker-alt text-4xl text-gold mb-4"></i>
                     <h3 class="text-2xl font-serif font-bold mb-2">Atelier & Retrait</h3>
@@ -603,12 +676,71 @@
         </div>
     </section>
 
-    <!-- FOOTER / CONTACT -->
+    <!-- SECTION INSTAGRAM DYNAMIQUE (DOUBLE IMAGE POUR VRAI FONDU) -->
+    <section id="instagram" class="py-12 md:py-20 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <i class="fab fa-instagram text-4xl text-gold mb-4"></i>
+            <h2 class="text-3xl font-serif font-bold text-dark mb-2">@m.rocher2022</h2>
+            <p class="text-gray-500 mb-8 md:mb-12">Suivez nos créations et actualités en direct</p>
+
+            <!-- Grid Static -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
+                
+                <!-- SLOT 1 : DOUBLE IMAGE -->
+                <a href="https://instagram.com/m.rocher2022" target="_blank" class="group relative block overflow-hidden aspect-square bg-gray-100 insta-slot">
+                    <!-- Image ARRIÈRE (celle qui va apparaître) -->
+                    <img id="insta-1-back" class="absolute inset-0 w-full h-full object-cover z-0" src="assets/img/instagram/01.png" alt="Instagram">
+                    <!-- Image AVANT (celle qu'on voit, et qui va disparaître) -->
+                    <img id="insta-1-front" class="absolute inset-0 w-full h-full object-cover z-10 transition-opacity duration-1000" src="assets/img/instagram/01.png" alt="Instagram">
+                    
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 z-20 transition duration-300 flex items-center justify-center">
+                        <i class="fab fa-instagram text-white opacity-0 group-hover:opacity-100 text-3xl transition duration-300"></i>
+                    </div>
+                </a>
+
+                <!-- SLOT 2 : DOUBLE IMAGE -->
+                <a href="https://instagram.com/m.rocher2022" target="_blank" class="group relative block overflow-hidden aspect-square bg-gray-100 insta-slot">
+                     <img id="insta-2-back" class="absolute inset-0 w-full h-full object-cover z-0" src="assets/img/instagram/02.png" alt="Instagram">
+                     <img id="insta-2-front" class="absolute inset-0 w-full h-full object-cover z-10 transition-opacity duration-1000" src="assets/img/instagram/02.png" alt="Instagram">
+                     
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 z-20 transition duration-300 flex items-center justify-center">
+                        <i class="fab fa-instagram text-white opacity-0 group-hover:opacity-100 text-3xl transition duration-300"></i>
+                    </div>
+                </a>
+
+                <!-- SLOT 3 : DOUBLE IMAGE -->
+                <a href="https://instagram.com/m.rocher2022" target="_blank" class="group relative block overflow-hidden aspect-square bg-gray-100 insta-slot">
+                    <img id="insta-3-back" class="absolute inset-0 w-full h-full object-cover z-0" src="assets/img/instagram/03.png" alt="Instagram">
+                    <img id="insta-3-front" class="absolute inset-0 w-full h-full object-cover z-10 transition-opacity duration-1000" src="assets/img/instagram/03.png" alt="Instagram">
+
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 z-20 transition duration-300 flex items-center justify-center">
+                        <i class="fab fa-instagram text-white opacity-0 group-hover:opacity-100 text-3xl transition duration-300"></i>
+                    </div>
+                </a>
+
+                <!-- SLOT 4 : LIEN FIXE -->
+                 <a href="https://instagram.com/m.rocher2022" target="_blank" class="group relative overflow-hidden aspect-square block bg-gray-100">
+                    <div class="w-full h-full bg-cream flex flex-col items-center justify-center border border-gold group-hover:bg-gold group-hover:text-white transition duration-300">
+                        <span class="font-serif font-bold text-xl mb-1">Voir plus</span>
+                        <span class="text-xs uppercase tracking-widest">sur Instagram</span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="mt-10">
+                 <a href="https://instagram.com/m.rocher2022" target="_blank" class="inline-block border-2 border-dark text-dark px-8 py-3 uppercase tracking-widest text-xs font-bold hover:bg-dark hover:text-white transition duration-300">
+                    S'abonner
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: FOOTER / CONTACT -->
     <footer id="contact" class="bg-white text-dark py-12 border-t-4 border-gold">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center text-center">
                 
-                <!-- Logo -->
+                <!-- Logo & Slogan -->
                 <div class="flex flex-col items-center justify-center w-full">
                     <img src="assets/img/logo.png" 
                          loading="lazy" 
@@ -622,7 +754,7 @@
                     </p>
                 </div>
 
-                <!-- Coordonnées -->
+                <!-- Coordonnées Rapides -->
                 <div class="flex flex-col items-center justify-center w-full md:items-start md:pl-10">
                     <h4 class="text-xl font-serif font-bold mb-6 text-gold border-b border-gray-100 pb-2 inline-block md:block">Contact</h4>
                     <p class="mb-3 flex items-center justify-center md:justify-start group w-full">
@@ -635,16 +767,31 @@
                     </p>
                 </div>
 
-                <!-- Réseaux Sociaux (Sécurisé) -->
+                <!-- Réseaux Sociaux -->
                 <div class="flex flex-col items-center justify-center w-full md:items-start md:pl-10">
                     <h4 class="text-xl font-serif font-bold mb-6 text-gold border-b border-gray-100 pb-2 inline-block md:block">Suivez-nous</h4>
-                    <div class="flex items-center space-x-4 bg-gray-50 p-4 rounded-lg border border-gray-100">
-                        <a href="https://instagram.com/m.rocher2022" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-dark flex items-center justify-center text-white hover:bg-gold hover:text-dark transition shadow-lg transform hover:scale-110 duration-300" aria-label="Suivez-nous sur Instagram">
-                            <i class="fab fa-instagram text-xl"></i>
-                        </a>
-                        <div class="text-left">
-                            <span class="block font-bold text-dark">Instagram</span>
-                            <a href="https://instagram.com/m.rocher2022" target="_blank" rel="noopener noreferrer" class="text-gray-500 text-sm hover:text-gold transition">@m.rocher2022</a>
+                    
+                    <div class="space-y-4 w-full max-w-xs mx-auto md:mx-0">
+                        <!-- Instagram -->
+                        <div class="flex items-center space-x-4 bg-gray-50 p-4 rounded-lg border border-gray-100">
+                            <a href="https://instagram.com/m.rocher2022" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-dark flex items-center justify-center text-white hover:bg-gold hover:text-dark transition shadow-lg transform hover:scale-110 duration-300" aria-label="Suivez-nous sur Instagram">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <div class="text-left">
+                                <span class="block font-bold text-dark">Instagram</span>
+                                <a href="https://instagram.com/m.rocher2022" target="_blank" rel="noopener noreferrer" class="text-gray-500 text-sm hover:text-gold transition">@m.rocher2022</a>
+                            </div>
+                        </div>
+
+                        <!-- Facebook -->
+                        <div class="flex items-center space-x-4 bg-gray-50 p-4 rounded-lg border border-gray-100">
+                            <a href="https://www.facebook.com/p/MRocher-100087912335771/?locale=fr_FR" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-dark flex items-center justify-center text-white hover:bg-gold hover:text-dark transition shadow-lg transform hover:scale-110 duration-300" aria-label="Suivez-nous sur Facebook">
+                                <i class="fab fa-facebook-f text-xl"></i>
+                            </a>
+                            <div class="text-left">
+                                <span class="block font-bold text-dark">Facebook</span>
+                                <a href="https://www.facebook.com/p/MRocher-100087912335771/?locale=fr_FR" target="_blank" rel="noopener noreferrer" class="text-gray-500 text-sm hover:text-gold transition">Maison Rocher</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -652,15 +799,17 @@
             </div>
             
             <div class="border-t border-gray-200 mt-16 pt-8 text-center text-gray-400 text-xs uppercase tracking-widest">
-                <p>&copy; 2025 Maison Rocher. Tous droits réservés.</p>
+                <p>&copy; 2026 Maison Rocher. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts JS -->
+    <!-- Scripts Fonctionnels -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Menu Mobile Toggle
+            // ============================================
+            // 1. GESTION MENU MOBILE
+            // ============================================
             const btn = document.getElementById('mobile-menu-btn');
             const menu = document.getElementById('mobile-menu');
             const links = document.querySelectorAll('.mobile-link');
@@ -668,21 +817,103 @@
             if (btn && menu) {
                 btn.addEventListener('click', () => {
                     menu.classList.toggle('hidden');
-                    // Amélioration Accessibilité: focus le premier lien quand on ouvre
                     if (!menu.classList.contains('hidden')) {
                          const firstLink = menu.querySelector('a');
                          if(firstLink) firstLink.focus();
                     }
                 });
-
                 links.forEach(link => {
                     link.addEventListener('click', () => {
                         menu.classList.add('hidden');
                     });
                 });
             }
+
+            // ============================================
+            // 2. ANIMATION INSTAGRAM - VRAI CROSS-FADE (3 SECONDES)
+            // ============================================
+            
+            const instaPhotos = [
+                'assets/img/instagram/01.png',
+                'assets/img/instagram/02.png',
+                'assets/img/instagram/03.png',
+                'assets/img/instagram/04.png',
+                'assets/img/instagram/05.png',
+                'assets/img/instagram/06.png',
+                'assets/img/instagram/07.png',
+                'assets/img/instagram/08.png',
+                'assets/img/instagram/09.png',
+                'assets/img/instagram/10.png',
+                'assets/img/instagram/11.png',
+                'assets/img/instagram/12.png',
+            ];
+
+            // On stocke les paires d'ID (front, back)
+            const slots = [
+                { front: 'insta-1-front', back: 'insta-1-back' },
+                { front: 'insta-2-front', back: 'insta-2-back' },
+                { front: 'insta-3-front', back: 'insta-3-back' }
+            ];
+            
+            let displayedIndices = [0, 1, 2]; // On suppose que les 3 premières sont chargées par défaut dans le HTML
+            let currentSlotIndex = 0; // 0 = Gauche, 1 = Milieu, 2 = Droite
+
+            function getRandomUniqueIndex(excludeArray, max) {
+                let idx;
+                do {
+                    idx = Math.floor(Math.random() * max);
+                } while (excludeArray.includes(idx));
+                return idx;
+            }
+
+            // Fonction de mise à jour séquentielle (Vrai Cross-Fade)
+            function updateNextImage() {
+                 const slot = slots[currentSlotIndex];
+                 const frontEl = document.getElementById(slot.front);
+                 const backEl = document.getElementById(slot.back);
+                 
+                 // 1. Choisir une nouvelle image
+                 const newPhotoIndex = getRandomUniqueIndex(displayedIndices, instaPhotos.length);
+                 
+                 // 2. Charger l'image dans le BACK (invisible pour l'instant car derrière le Front)
+                 backEl.src = instaPhotos[newPhotoIndex];
+                 
+                 // On attend que l'image Back soit chargée pour lancer la transition
+                 // (Pour éviter de voir du blanc si l'image met du temps à charger)
+                 backEl.onload = () => {
+                     // 3. FAIRE DISPARAÎTRE LE FRONT (révélant le Back)
+                     frontEl.classList.add('opacity-0');
+                     
+                     // 4. Une fois la transition finie (1s)...
+                     setTimeout(() => {
+                         // On met à jour le Front avec la nouvelle image (sans transition pour que ce soit invisible)
+                         frontEl.src = instaPhotos[newPhotoIndex];
+                         
+                         // On désactive la transition temporairement pour "reset" l'opacité instantanément
+                         frontEl.classList.remove('transition-opacity');
+                         frontEl.classList.remove('opacity-0');
+                         
+                         // Force le navigateur à prendre en compte le changement (Reflow)
+                         void frontEl.offsetWidth; 
+                         
+                         // On remet la transition pour la prochaine fois
+                         frontEl.classList.add('transition-opacity');
+                         
+                         // Mise à jour de l'index affiché
+                         displayedIndices[currentSlotIndex] = newPhotoIndex;
+                         
+                         // On passe au slot suivant pour le prochain tour
+                         currentSlotIndex = (currentSlotIndex + 1) % 3;
+                         
+                     }, 1000); // Temps de la transition CSS (duration-1000)
+                 };
+            }
+
+            // Démarrage du cycle après 2 secondes, puis toutes les 3 secondes (3000ms)
+            setTimeout(() => {
+                setInterval(updateNextImage, 3000); 
+            }, 2000);
         });
     </script>
 </body>
-
 </html>
