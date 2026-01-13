@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- PAGE UNIQUE (Site One-Page) -->
+  <url>
+    <loc>https://maisonrocher.jk-alliance.com/</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+
+    <!-- IMAGE 1 : L'identité Visuelle (Pour recherche "Maison Rocher") -->
+    <image:image>
+      <image:loc>https://maisonrocher.jk-alliance.com/assets/img/logo2.png</image:loc>
+      <image:title>Maison Rocher - Artisan Pâtissier Traiteur à Linas (91)</image:title>
+      <image:caption>Logo officiel Maison Rocher. Pâtisserie fine et service traiteur en Essonne.</image:caption>
+    </image:image>
+
+    <!-- IMAGE 2 : Le Produit Phare (Pour recherche "Choux mariage 91") -->
+    <image:image>
+      <image:loc>https://maisonrocher.jk-alliance.com/assets/img/choux.png</image:loc>
+      <image:title>Plateau de Choux Craquelins - Traiteur Mariage Essonne</image:title>
+      <image:caption>Nos choux craquelins faits maison pour vos événements : mariage, baptême et réception d'entreprise dans le 91.</image:caption>
+    </image:image>
+
+    <!-- IMAGE 3 : Le Savoir-faire (Pour recherche "Meilleur flan Linas") -->
+    <image:image>
+      <image:loc>https://maisonrocher.jk-alliance.com/assets/img/flan.png</image:loc>
+      <image:title>Flans Pâtissiers Crémeux et Artisanaux</image:title>
+      <image:caption>Véritable flan pâtissier à la part ou entier. Recette traditionnelle 100% fait maison.</image:caption>
+    </image:image>
+
+    <!-- IMAGE 4 : L'Atelier (Pour recherche "Pâtissier Linas") -->
+    <image:image>
+      <image:loc>https://maisonrocher.jk-alliance.com/assets/img/description.png</image:loc>
+      <image:title>Atelier Pâtisserie Maison Rocher Linas</image:title>
+      <image:caption>Travail artisanal de produits frais (Vanille Madagascar, Chocolat Grand Cru) dans notre laboratoire de Linas.</image:caption>
+    </image:image>
+
+  </url>
+</urlset>
