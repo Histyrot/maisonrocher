@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     
     <!-- =========================================
          1. SÉCURITÉ & MÉTADONNÉES TECHNIQUES
@@ -11,6 +11,20 @@
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="theme-color" content="#F9F7F2">
+
+    <!-- =========================================
+         OPTIMISATIONS APPLE (IOS) AJOUTÉES
+    ========================================== -->
+    <!-- Permet au site de se comporter comme une app (supprime l'interface Safari inutile en mode standalone) -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Style de la barre de statut (translucide pour se fondre avec le site) -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <!-- Titre de l'application sur l'écran d'accueil -->
+    <meta name="apple-mobile-web-app-title" content="Maison Rocher">
+    <!-- Icône pour l'écran d'accueil iPhone/iPad (Webclip) -->
+    <link rel="apple-touch-icon" href="assets/img/logo.png">
+    <!-- Évite la détection automatique des numéros qui peut changer la couleur du texte -->
+    <meta name="format-detection" content="telephone=no">
 
     <!-- =========================================
          2. SEO & VISIBILITÉ GOOGLE (OPTIMISÉ)
@@ -86,11 +100,20 @@
             background-color: var(--color-cream);
             color: var(--color-dark);
             text-rendering: optimizeLegibility;
+            /* Optimisation Apple Font Rendering */
             -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            /* Empêche le redimensionnement automatique du texte en mode paysage sur iOS */
+            -webkit-text-size-adjust: 100%;
         }
 
         h1, h2, h3, h4, .font-serif {
             font-family: 'Playfair Display', serif;
+        }
+
+        /* Suppression du "Tap Highlight" gris sur iOS au clic */
+        a, button, input, select, textarea {
+            -webkit-tap-highlight-color: transparent;
         }
 
         /* Optimisation du rendu */
@@ -107,6 +130,13 @@
             background-position: center center; 
             background-repeat: no-repeat;
             background-attachment: fixed;
+        }
+
+        /* Fix spécifique iOS pour background-attachment: fixed qui bug souvent sur iPhone */
+        @supports (-webkit-touch-callout: none) {
+            .hero-bg {
+                background-attachment: scroll;
+            }
         }
 
         @media (hover: none) and (pointer: coarse) {
