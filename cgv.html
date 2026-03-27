@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth scroll-pt-24">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="theme-color" content="#F9F7F2">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Maison Rocher">
+    
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+    
+    <meta name="format-detection" content="telephone=no">
+
+    <title>Conditions Générales de Vente (CGV) - Maison ROCHER</title>
+    
+    <meta name="description" content="Conditions Générales de Vente (CGV) des produits de pâtisserie et services traiteur de la Maison Rocher.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#D4AF37',
+                        dark: '#2C2C2C',
+                        cream: '#F9F7F2',
+                    },
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+
+    <style>
+        :root {
+            --color-gold: #D4AF37;
+            --color-dark: #2C2C2C;
+            --color-cream: #F9F7F2;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--color-cream);
+            color: var(--color-dark);
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        a, button, input, select, textarea {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+</head>
+
+<body class="antialiased overflow-x-hidden flex flex-col min-h-screen">
+
+    <nav class="bg-cream shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-end h-14 md:h-24 relative">
+                
+                <a href="index.html" aria-label="Retour à l'accueil" class="absolute top-0 left-0 h-full flex items-start z-50 -ml-4 md:-ml-80 -mt-3 md:-mt-10">
+                    <img src="assets/img/logo.webp" 
+                         alt="Logo Maison Rocher" 
+                         width="150" height="150"
+                         fetchpriority="high"
+                         class="h-full w-auto object-contain transform scale-[2.1] md:scale-[2.5] origin-top-left transition-transform duration-300">
+                </a>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#accueil" class="text-dark hover:text-gold transition duration-300 uppercase text-xs tracking-widest font-bold">Accueil</a>
+                    <a href="index.html#philosophie" class="text-dark hover:text-gold transition duration-300 uppercase text-xs tracking-widest font-bold">Savoir-Faire</a>
+                    <a href="index.html#produits" class="text-dark hover:text-gold transition duration-300 uppercase text-xs tracking-widest font-bold">Notre Carte</a>
+                    <a href="index.html#marches" class="text-dark hover:text-gold transition duration-300 uppercase text-xs tracking-widest font-bold">Où nous trouver</a>
+                    <a href="formulaire.html" class="px-4 py-2 border border-dark hover:bg-dark hover:text-white transition duration-300 uppercase text-xs tracking-widest font-bold">Contact</a>
+                </div>
+                
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-dark hover:text-gold focus:outline-none p-2 w-12 h-12 flex items-center justify-center" aria-label="Ouvrir le menu">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-cream border-t border-gold absolute w-full shadow-lg">
+            <a href="index.html#accueil" class="block py-4 px-4 text-sm font-bold uppercase tracking-widest hover:bg-white text-center border-b border-gray-100 mobile-link">Accueil</a>
+            <a href="index.html#philosophie" class="block py-4 px-4 text-sm font-bold uppercase tracking-widest hover:bg-white text-center border-b border-gray-100 mobile-link">Savoir-Faire</a>
+            <a href="index.html#produits" class="block py-4 px-4 text-sm font-bold uppercase tracking-widest hover:bg-white text-center border-b border-gray-100 mobile-link">Notre Carte</a>
+            <a href="index.html#marches" class="block py-4 px-4 text-sm font-bold uppercase tracking-widest hover:bg-white text-center border-b border-gray-100 mobile-link">Où nous trouver</a>
+            <a href="formulaire.html" class="block py-4 px-4 text-sm font-bold uppercase tracking-widest bg-dark text-white text-center mobile-link">Contact</a>
+        </div>
+    </nav>
+
+    <main class="flex-grow bg-cream pt-28 pb-16 md:pt-40 md:pb-24 px-4">
+        <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 shadow-xl border-t-4 border-gold rounded-sm">
+            
+            <div class="text-center mb-10">
+                <h1 class="text-3xl md:text-5xl font-serif font-bold text-dark mb-4">Conditions Générales de Vente (CGV)</h1>
+                <div class="w-16 h-1 bg-gold mx-auto mb-6"></div>
+                <p class="text-gray-500 text-sm">Produits de Pâtisserie avec Livraison</p>
+            </div>
+
+            <div class="prose max-w-none text-gray-700 space-y-8 text-sm md:text-base">
+                
+                <section>
+                    <h2 class="text-xl font-serif font-bold text-dark mb-3 border-b border-gray-100 pb-2">Article 1 - Objet et champ d'application</h2>
+                    <p>
+                        Les présentes Conditions Générales de Vente (CGV) régissent les ventes de produits de pâtisserie (ci-après les "Produits") réalisées par <strong>M. ROCHER</strong>, immatriculée sous le numéro SIRET <strong>819 592 627 00015</strong>, et ayant son siège social à <strong>91400 Gometz-la-Ville</strong> (ci-après le "Vendeur"), auprès de tout consommateur ou non-professionnel (ci-après l'"Acheteur"), par le biais de son site internet, par téléphone ou par tout autre moyen de commande.
+                    </p>
+                    <p class="mt-2">
+                        Toute commande de Produits implique l'adhésion sans réserve de l'Acheteur aux présentes CGV. Celles-ci prévalent sur toutes autres conditions, à l'exception de celles qui ont été acceptées expressément par le Vendeur.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-serif font-bold text-dark mb-3 border-b border-gray-100 pb-2">Article 2 - Produits</h2>
+                    <p>
+                        Les Produits proposés à la vente sont ceux figurant sur le catalogue ou le site internet du Vendeur au jour de la commande.
+                    </p>
+                    <p class="mt-2">
+                        Chaque Produit est présenté avec une description précisant ses caractéristiques essentielles (ingrédients, allergènes, poids ou taille, prix). Les photographies et illustrations ne sont données qu'à titre indicatif et ne sont pas contractuelles.
+                    </p>
+                    <p class="mt-2">
+                        Compte tenu du caractère artisanal des Produits, de légères variations peuvent exister. Le Vendeur s'engage à ce que les Produits livrés soient conformes à la description, sous réserve des tolérances d'usage dans le secteur de la pâtisserie.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-serif font-bold text-dark mb-3 border-b border-gray-100 pb-2">Article 3 - Prix</h2>
+                    <p>
+                        Les prix des Produits sont indiqués en euros (€) toutes taxes comprises (TTC), tenant compte de la TVA applicable au jour de la commande. Tout changement du taux de TVA pourra être répercuté sur le prix des Produits.
+                    </p>
+                    <p class="mt-2">
+                        Les prix n'incluent pas les frais de livraison, facturés en supplément et indiqués avant la validation finale de la commande.
+                    </p>
+                    <p class="mt-2">
+                        Le Vendeur se réserve le droit de modifier ses prix à tout moment, mais les Produits seront facturés sur la base des tarifs en vigueur au moment de l'enregistrement de la commande.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-serif font-bold text-dark mb-3 border-b border-gray-100 pb-2">Article 4 - Commandes</h2>
+                    <p>
+                        Pour passer commande, l'Acheteur doit suivre le processus de commande établi par le Vendeur (notamment sur le site internet).
+                    </p>
+                    <p class="mt-2">La commande ne sera considérée comme définitive qu'après :</p>
+                    <ul class="list-disc pl-5 mt-2 space-y-1">
+                        <li>Validation de la commande par l'Acheteur.</li>
+                        <li>Paiement d’un acompte de 30% ou l'intégralité du prix.</li>
+                        <li>Confirmation de la commande par le Vendeur par l'envoi d'un courriel à l'Acheteur.</li>
+                    </ul>
+                    <p class="mt-2">
+                        Le Vendeur se réserve le droit de refuser toute commande pour motif légitime, notamment en cas de problème de paiement, d'indisponibilité des produits, ou de commande passée en dehors des zones de livraison couvertes.
+                    </p>
+
+                    <div class="overflow-x-auto mt-6">
+                        <table class="w-full text-left border-collapse border border-gray-200">
+                            <thead>
+                                <tr class="bg-gray-50 border-b border-gray-200 text-dark">
+                                    <th class="p-3 font-bold text-sm">Étape de la commande</th>
+                                    <th class="p-3 font-bold text-sm">Action de l'Acheteur</th>
+                                    <th class="p-3 font-bold text-sm">Justificatif / Confirmation</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-sm">
+                                <tr class="border-b border-gray-100">
+                                    <td class="p-3 font-bold">Sélection des Produits</td>
+                                    <td class="p-3">Ajout au panier / demande de devis</td>
+                                    <td class="p-3">Récapitulatif du panier / Signature du devis</td>
+                                </tr>
+                                <tr class="border-b border-gray-100">
+                                    <td class="p-3 font-bold">Validation</td>
+                                    <td class="p-3">Acceptation des CGV</td>
+                                    <td class="p-3">Coche de la case / Signature de la commande</td>
+                                </tr>
+                                <tr class="border-b border-gray-100">
+                                    <td class="p-3 font-bold">Paiement</td>
+                                    <td class="p-3">Saisie des informations bancaires</td>
+                                    <td class="p-3">Confirmation de transaction</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-bold">Confirmation</td>
+                                    <td class="p-3">Réception du courriel du Vendeur</td>
+                                    <td class="p-3">Facture acquittée</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-serif font-bold text-dark mb-3 border-b border-gray-100 pb-2">Article 5 - Modalités de paiement</h2>
+                    <p>
+                        Le règlement de la commande s’effectue au comptant au moment de la validation de la commande par Carte Bancaire, Virement ou autre moyens de paiement conventionnés avec le Vendeur. Aucune commande ne sera mise en préparation sans la réception effective du paiement total ou d’un acompte de 40% préalablement convenu. En cas de paiement par virement, la preuve de virement doit être envoyée au plus tard 48h avant la date de livraison prévue.
+                    </p>
+                    <p class="mt-2">
+                        Maison Rocher se réserve le droit de suspendre toute gestion de commande ou toute livraison en cas de refus d’autorisation de paiement de la part des organismes officiellement accrédités ou en cas de non-paiement.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-serif font-bold text-dark mb-3 border-b border-gray-100 pb-2">Article 6 - Livraison</h2>
+                    
+                    <h3 class="font-bold text-dark mt-4 mb-1">6.1 Zones de livraison</h3>
+                    <p>La livraison des Produits est limitée aux zones géographiques précisées par le Vendeur. Si l'adresse de livraison est hors zone, la commande ne pourra être finalisée.</p>
+                    
+                    <h3 class="font-bold text-dark mt-4 mb-1">6.2 Délais de livraison</h3>
+                    <p>
+                        Les délais de livraison sont indiqués lors de la commande et courent à compter de la date de confirmation de la commande. Étant donné la nature périssable des Produits et leur fabrication artisanale, il est impératif de respecter la date et le créneau horaire convenus pour la livraison.
+                    </p>
+                    <p class="mt-2">
+                        Si le Vendeur ne respecte pas la date ou le délai de livraison prévu, l'Acheteur peut enjoindre le Vendeur d'effectuer la livraison dans un délai supplémentaire raisonnable par lettre recommandée avec demande d'avis de réception ou par écrit sur un autre support durable. Si le Vendeur ne s'exécute pas dans ce nouveau délai, l'Acheteur peut résoudre le contrat par les mêmes modalités (Article L. 216-6 du Code de la consommation).
+                    </p>
+
+                    <h3 class="font-bold text-dark mt-4 mb-1">6.3 Modalités de livraison</h3>
+                    <p>Les Produits sont livrés à l'adresse indiquée par l'Acheteur lors de la commande. En cas d'absence de l'Acheteur à l'heure convenue, le Vendeur se réserve le droit :</p>
+                    <ul class="list-disc pl-5 mt-2 space-y-1">
+                        <li>De laisser le colis à un tiers (gardien, voisin) avec accord préalable de l'Acheteur.</li>
+                        <li>De reprendre le colis, la commande étant considérée comme perdue en raison de la nature périssable des Produits. Dans ce cas, l'Acheteur ne pourra prétendre à aucun remboursement, la non-réception étant imputable à l'Acheteur.</li>
+                    </ul>
+
+                    <h3 class="font-bold text-dark mt-4 mb-1">6.4 Transfert de risques</h3>
+                    <p>
+                        Les risques sont transférés à l'Acheteur au moment où celui-ci (ou un tiers désigné par lui) prend physiquement possession des Produits. L'Acheteur doit vérifier l'état des Produits au moment de la livraison et, le cas échéant, formuler des réserves précises sur le bon de livraison ou auprès du livreur.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-serif font-bold text-dark mb-3 border-b border-gray-100 pb-2">Article 7 - Droit de rétractation</h2>
+                    <p>
+                        Conformément à l'article L. 221-28 du Code de la consommation, le droit de rétractation ne peut être exercé pour la fourniture de biens qui, par leur nature, sont susceptibles de se détériorer ou de se périmer rapidement.
+                    </p>
+                    <p class="mt-2">
+                        Les Produits de pâtisserie étant des denrées alimentaires périssables, l'Acheteur ne bénéficie d'aucun droit de rétractation.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-serif font-bold text-dark mb-3 border-b border-gray-100 pb-2">Article 8 - Garanties</h2>
+                    <h3 class="font-bold text-dark mt-4 mb-1">8.1 Garantie légale de conformité</h3>
+                    <p>
+                        Le Vendeur est tenu de livrer un Produit conforme au contrat et répond des défauts de conformité existant lors de la délivrance (Article L. 217-4 et suivants du Code de la consommation). L'action résultant du défaut de conformité se prescrit par deux ans à compter de la délivrance du Produit.
+                    </p>
+                    <h3 class="font-bold text-dark mt-4 mb-1">8.2 Garantie légale des vices cachés</h3>
+                    <p>
+                        Le Vendeur est tenu de la garantie à raison des défauts cachés de la chose vendue qui la rendent impropre à l'usage auquel on la destine, ou qui diminuent tellement cet usage que l'Acheteur ne l'aurait pas acquise, ou n'en aurait donné qu'un moindre prix, s'il les avait connus (Article 1641 et suivants du Code civil). L'action doit être intentée par l'Acheteur dans un délai de deux ans à compter de la découverte du vice.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-serif font-bold text-dark mb-3 border-b border-gray-100 pb-2">Article 9 - Responsabilité</h2>
+                    <p>
+                        La responsabilité du Vendeur ne pourra être engagée en cas de non-respect de la législation du pays où les produits sont livrés. Il appartient à l'Acheteur de vérifier auprès des autorités locales les possibilités d'importation ou d'utilisation des produits.
+                    </p>
+                    <p class="mt-2">
+                        La responsabilité du Vendeur est limitée au montant de la commande et ne saurait être engagée pour tous dommages indirects ou imprévisibles, notamment pour tout préjudice alimentaire découlant d'une conservation ou manipulation inappropriée des Produits par l'Acheteur après la livraison.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-serif font-bold text-dark mb-3 border-b border-gray-100 pb-2">Article 10 - Propriété intellectuelle</h2>
+                    <p>
+                        Tous les éléments du site du Vendeur sont et restent sa propriété intellectuelle et exclusive. Nul n'est autorisé à reproduire, exploiter, rediffuser, ou utiliser à quelque titre que ce soit, même partiellement, des éléments du site, qu'ils soient logiciels, visuels ou sonores.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-serif font-bold text-dark mb-3 border-b border-gray-100 pb-2">Article 11 - Données personnelles</h2>
+                    <p>
+                        Le Vendeur s'engage à respecter la confidentialité des informations fournies par l'Acheteur, qui sont nécessaires à la gestion de la commande et à l'amélioration des services. Conformément au RGPD et à la loi Informatique et Libertés du 6 janvier 1978 modifiée, l'Acheteur dispose d'un droit d'accès, de rectification et d'opposition aux données personnelles le concernant en écrivant à <a href="mailto:rochertraiteur@gmail.com" class="text-gold font-bold hover:underline">rochertraiteur@gmail.com</a>.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-serif font-bold text-dark mb-3 border-b border-gray-100 pb-2">Article 12 - Archivage – Preuve</h2>
+                    <p>
+                        Le Vendeur archive les bons de commandes et les factures sur un support fiable et durable constituant une copie fidèle conformément aux dispositions de l'article 1360 du Code civil. Les registres informatisés du Vendeur seront considérés par les parties comme preuve des communications, commandes, paiements et transactions intervenues entre les parties.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-serif font-bold text-dark mb-3 border-b border-gray-100 pb-2">Article 13 - Règlement des litiges – Droit applicable</h2>
+                    <p>
+                        Les présentes CGV sont soumises à la loi française.
+                    </p>
+                    <p class="mt-2">
+                        En cas de litige, l'Acheteur a la possibilité de recourir gratuitement à un médiateur de la consommation en vue de la résolution amiable du différend qui l'oppose au Vendeur, conformément à l'article L. 612-1 du Code de la consommation.
+                    </p>
+                    <p class="mt-2">
+                        À défaut de règlement amiable, les tribunaux français seront seuls compétents.
+                    </p>
+                </section>
+
+                <div class="mt-10 p-6 bg-gray-50 border border-gray-200 rounded-sm text-center">
+                    <p class="font-bold text-dark">Fait à 91400 Gometz-la-Ville, le 1 janv. 2026.</p>
+                    <p class="mt-2 text-gray-600">Entreprise : <strong>Maison Rocher</strong></p>
+                </div>
+
+            </div>
+            
+            <div class="mt-12 text-center pt-8 border-t border-gray-100">
+                <a href="index.html" class="inline-block bg-dark text-white px-8 py-3 uppercase tracking-widest text-xs font-bold hover:bg-gold transition duration-300 rounded-sm">
+                    Retour à l'accueil
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer id="contact-footer" class="bg-white text-dark py-12 border-t-4 border-gold">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center text-center">
+                
+                <div class="flex flex-col items-center justify-center w-full">
+                    <img src="assets/img/logo.webp" 
+                         loading="lazy" 
+                         decoding="async"
+                         alt="Logo Maison Rocher" 
+                         width="200" height="150"
+                         class="h-48 md:h-80 w-auto object-contain mb-4 transition-all duration-300 mx-auto translate-x-2">
+                    <div class="w-12 h-0.5 bg-gold mb-4"></div>
+                    <p class="text-gray-600 text-sm font-serif italic">
+                        Pâtisseries & Gourmandises.<br>Passion, création, innovation.
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-center justify-center w-full md:items-start md:pl-10">
+                    <h4 class="text-xl font-serif font-bold mb-6 text-gold border-b border-gray-100 pb-2 inline-block md:block">Contact</h4>
+                    <p class="mb-3 flex items-center justify-center md:justify-start group w-full">
+                        <span class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gold mr-3 group-hover:bg-gold group-hover:text-white transition"><i class="fas fa-phone-alt text-sm"></i></span>
+                        <a href="tel:0628655206" class="hover:text-gold transition font-bold">06 28 65 52 06</a>
+                    </p>
+                    <p class="mb-3 flex items-center justify-center md:justify-start group w-full">
+                        <span class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gold mr-3 group-hover:bg-gold group-hover:text-white transition"><i class="fas fa-envelope text-sm"></i></span>
+                        <a href="mailto:rochertraiteur@gmail.com" class="hover:text-gold transition font-bold">rochertraiteur@gmail.com</a>
+                    </p>
+                    
+                    <a href="formulaire.html" class="mt-4 inline-block bg-dark text-white border border-dark px-6 py-2 uppercase tracking-widest text-xs font-bold hover:bg-gold hover:border-gold transition duration-300 rounded">
+                        Formulaire de contact
+                    </a>
+                </div>
+
+                <div class="flex flex-col items-center justify-center w-full md:items-start md:pl-10">
+                    <h4 class="text-xl font-serif font-bold mb-6 text-gold border-b border-gray-100 pb-2 inline-block md:block">Suivez-nous</h4>
+                    
+                    <div class="space-y-4 w-full max-w-xs mx-auto md:mx-0">
+                        <div class="flex items-center space-x-4 bg-gray-50 p-4 rounded-lg border border-gray-100">
+                            <a href="https://instagram.com/m.rocher2022" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-dark flex items-center justify-center text-white hover:bg-gold hover:text-dark transition shadow-lg transform hover:scale-110 duration-300" aria-label="Suivez-nous sur Instagram">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <div class="text-left">
+                                <span class="block font-bold text-dark">Instagram</span>
+                                <a href="https://instagram.com/m.rocher2022" target="_blank" rel="noopener noreferrer" class="text-gray-500 text-sm hover:text-gold transition">@m.rocher2022</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-4 bg-gray-50 p-4 rounded-lg border border-gray-100">
+                            <a href="https://www.facebook.com/p/MRocher-100087912335771/?locale=fr_FR" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-dark flex items-center justify-center text-white hover:bg-gold hover:text-dark transition shadow-lg transform hover:scale-110 duration-300" aria-label="Suivez-nous sur Facebook">
+                                <i class="fab fa-facebook-f text-xl"></i>
+                            </a>
+                            <div class="text-left">
+                                <span class="block font-bold text-dark">Facebook</span>
+                                <a href="https://www.facebook.com/p/MRocher-100087912335771/?locale=fr_FR" target="_blank" rel="noopener noreferrer" class="text-gray-500 text-sm hover:text-gold transition">Maison Rocher</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="border-t border-gray-200 mt-16 pt-8 flex flex-col items-center gap-4 text-center text-gray-400 text-xs uppercase tracking-widest">
+                <div class="flex flex-wrap justify-center gap-4 md:gap-8 mb-2">
+                    <a href="mentions.html" class="hover:text-gold transition">Mentions légales</a>
+                    <a href="cgv.html" class="hover:text-gold transition text-gold">CGV</a>
+                    <a href="politique.html" class="hover:text-gold transition">Politique de confidentialité</a>
+                </div>
+                <p>&copy; 2026 Maison Rocher. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const links = document.querySelectorAll('.mobile-link');
+
+            if (btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                    if (!menu.classList.contains('hidden')) {
+                         const firstLink = menu.querySelector('a');
+                         if(firstLink) firstLink.focus();
+                    }
+                });
+                links.forEach(link => {
+                    link.addEventListener('click', () => {
+                        menu.classList.add('hidden');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

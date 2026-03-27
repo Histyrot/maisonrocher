@@ -1,0 +1,2 @@
+User-agent: *Allow: 
+/Lien vers le sitemap pour faciliter l'indexation par Google, Bing, etc.Sitemap: https://www.google.com/search?q=https://maisonrocher.jk-alliance.com/sitemap.xml

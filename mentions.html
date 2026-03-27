@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth scroll-pt-24">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="theme-color" content="#F9F7F2">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Maison Rocher">
+    
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+    
+    <meta name="format-detection" content="telephone=no">
+
+    <title>Mentions Légales - Maison ROCHER</title>
+    
+    <meta name="description" content="Mentions légales du site Maison Rocher, artisan pâtissier et traiteur à Linas (91).">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#D4AF37',
+                        dark: '#2C2C2C',
+                        cream: '#F9F7F2',
+                    },
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+
+    <style>
+        :root {
+            --color-gold: #D4AF37;
+            --color-dark: #2C2C2C;
+            --color-cream: #F9F7F2;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--color-cream);
+            color: var(--color-dark);
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        a, button, input, select, textarea {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+</head>
+
+<body class="antialiased overflow-x-hidden flex flex-col min-h-screen">
+
+    <nav class="bg-cream shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-end h-14 md:h-24 relative">
+                
+                <a href="index.html" aria-label="Retour à l'accueil" class="absolute top-0 left-0 h-full flex items-start z-50 -ml-4 md:-ml-80 -mt-3 md:-mt-10">
+                    <img src="assets/img/logo.webp" 
+                         alt="Logo Maison Rocher" 
+                         width="150" height="150"
+                         fetchpriority="high"
+                         class="h-full w-auto object-contain transform scale-[2.1] md:scale-[2.5] origin-top-left transition-transform duration-300">
+                </a>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#accueil" class="text-dark hover:text-gold transition duration-300 uppercase text-xs tracking-widest font-bold">Accueil</a>
+                    <a href="index.html#philosophie" class="text-dark hover:text-gold transition duration-300 uppercase text-xs tracking-widest font-bold">Savoir-Faire</a>
+                    <a href="index.html#produits" class="text-dark hover:text-gold transition duration-300 uppercase text-xs tracking-widest font-bold">Notre Carte</a>
+                    <a href="index.html#marches" class="text-dark hover:text-gold transition duration-300 uppercase text-xs tracking-widest font-bold">Où nous trouver</a>
+                    <a href="formulaire.html" class="px-4 py-2 border border-dark hover:bg-dark hover:text-white transition duration-300 uppercase text-xs tracking-widest font-bold">Contact</a>
+                </div>
+                
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-dark hover:text-gold focus:outline-none p-2 w-12 h-12 flex items-center justify-center" aria-label="Ouvrir le menu">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-cream border-t border-gold absolute w-full shadow-lg">
+            <a href="index.html#accueil" class="block py-4 px-4 text-sm font-bold uppercase tracking-widest hover:bg-white text-center border-b border-gray-100 mobile-link">Accueil</a>
+            <a href="index.html#philosophie" class="block py-4 px-4 text-sm font-bold uppercase tracking-widest hover:bg-white text-center border-b border-gray-100 mobile-link">Savoir-Faire</a>
+            <a href="index.html#produits" class="block py-4 px-4 text-sm font-bold uppercase tracking-widest hover:bg-white text-center border-b border-gray-100 mobile-link">Notre Carte</a>
+            <a href="index.html#marches" class="block py-4 px-4 text-sm font-bold uppercase tracking-widest hover:bg-white text-center border-b border-gray-100 mobile-link">Où nous trouver</a>
+            <a href="formulaire.html" class="block py-4 px-4 text-sm font-bold uppercase tracking-widest bg-dark text-white text-center mobile-link">Contact</a>
+        </div>
+    </nav>
+
+    <main class="flex-grow bg-cream pt-28 pb-16 md:pt-40 md:pb-24 px-4">
+        <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 shadow-xl border-t-4 border-gold rounded-sm">
+            
+            <div class="text-center mb-10">
+                <h1 class="text-3xl md:text-5xl font-serif font-bold text-dark mb-4">Mentions Légales</h1>
+                <div class="w-16 h-1 bg-gold mx-auto mb-6"></div>
+                <p class="text-gray-500 text-sm">En vigueur au 26 Mars 2026</p>
+            </div>
+
+            <div class="prose max-w-none text-gray-700 space-y-8">
+                
+                <p>
+                    Conformément aux dispositions des articles 6-III et 19 de la Loi n°2004-575 du 21 juin 2004 pour la Confiance dans l'Économie Numérique (L.C.E.N.), nous portons à la connaissance des utilisateurs et visiteurs du site <strong>Maison Rocher</strong> les informations suivantes :
+                </p>
+
+                <section>
+                    <h2 class="text-xl font-serif font-bold text-dark mb-3 border-b border-gray-100 pb-2">1. Propriétaire et Éditeur du site</h2>
+                    <ul class="list-none mt-2 space-y-1">
+                        <li><strong>Propriétaire du site :</strong> Maison Rocher</li>
+                        <li><strong>Numéro de SIRET :</strong> 819 592 627 00015</li>
+                        <li><strong>Siège social :</strong> 91400 Gometz-la-Ville</li>
+                        <li><strong>Téléphone :</strong> 06 28 65 52 06</li>
+                        <li><strong>E-mail :</strong> rochertraiteur@gmail.com</li>
+                        <li><strong>Directeur de la publication :</strong> Maison Rocher</li>
+                        <li class="mt-4 pt-4 border-t border-gray-100"><strong>Éditeur et Conception du site :</strong> JK-alliance</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-serif font-bold text-dark mb-3 border-b border-gray-100 pb-2">2. Hébergement</h2>
+                    <p>
+                        Le site est hébergé par :
+                    </p>
+                    <ul class="list-none mt-2 space-y-1">
+                        <li><strong>Nom de l'hébergeur :</strong> GitHub, Inc. (GitHub Pages)</li>
+                        <li><strong>Adresse :</strong> 88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis</li>
+                        <li><strong>Site web :</strong> <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-gold hover:underline">https://github.com</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-serif font-bold text-dark mb-3 border-b border-gray-100 pb-2">3. Propriété intellectuelle</h2>
+                    <p>
+                        L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.
+                    </p>
+                    <p class="mt-2">
+                        La reproduction de tout ou partie de ce site sur un support électronique quel qu'il soit est formellement interdite sauf autorisation expresse du directeur de la publication.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-serif font-bold text-dark mb-3 border-b border-gray-100 pb-2">4. Limitation de responsabilité</h2>
+                    <p>
+                        La Maison Rocher s'efforce de fournir sur le site des informations aussi précises que possible. Toutefois, elle ne pourra être tenue responsable des omissions, des inexactitudes et des carences dans la mise à jour, qu'elles soient de son fait ou du fait des tiers partenaires qui lui fournissent ces informations.
+                    </p>
+                    <p class="mt-2">
+                        Le site utilise la technologie JavaScript. Le site internet ne pourra être tenu responsable de dommages matériels liés à l'utilisation du site. De plus, l'utilisateur du site s'engage à accéder au site en utilisant un matériel récent, ne contenant pas de virus et avec un navigateur de dernière génération mis-à-jour.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-serif font-bold text-dark mb-3 border-b border-gray-100 pb-2">5. Liens hypertextes et cookies</h2>
+                    <p>
+                        Le site contient un certain nombre de liens hypertextes vers d'autres sites, mis en place avec l'autorisation de Maison Rocher. Cependant, Maison Rocher n'a pas la possibilité de vérifier le contenu des sites ainsi visités, et n'assumera en conséquence aucune responsabilité de ce fait.
+                    </p>
+                    <p class="mt-2">
+                        Pour plus d'informations sur l'utilisation des cookies et la gestion de vos données personnelles, veuillez consulter notre <a href="politique.html" class="text-gold font-bold hover:underline">Politique de confidentialité</a>.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-serif font-bold text-dark mb-3 border-b border-gray-100 pb-2">6. Droit applicable et attribution de juridiction</h2>
+                    <p>
+                        Tout litige en relation avec l'utilisation du site est soumis au droit français. Il est fait attribution exclusive de juridiction aux tribunaux compétents.
+                    </p>
+                </section>
+
+            </div>
+            
+            <div class="mt-12 text-center pt-8 border-t border-gray-100">
+                <a href="index.html" class="inline-block bg-dark text-white px-8 py-3 uppercase tracking-widest text-xs font-bold hover:bg-gold transition duration-300 rounded-sm">
+                    Retour à l'accueil
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer id="contact-footer" class="bg-white text-dark py-12 border-t-4 border-gold">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center text-center">
+                
+                <div class="flex flex-col items-center justify-center w-full">
+                    <img src="assets/img/logo.webp" 
+                         loading="lazy" 
+                         decoding="async"
+                         alt="Logo Maison Rocher" 
+                         width="200" height="150"
+                         class="h-48 md:h-80 w-auto object-contain mb-4 transition-all duration-300 mx-auto translate-x-2">
+                    <div class="w-12 h-0.5 bg-gold mb-4"></div>
+                    <p class="text-gray-600 text-sm font-serif italic">
+                        Pâtisseries & Gourmandises.<br>Passion, création, innovation.
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-center justify-center w-full md:items-start md:pl-10">
+                    <h4 class="text-xl font-serif font-bold mb-6 text-gold border-b border-gray-100 pb-2 inline-block md:block">Contact</h4>
+                    <p class="mb-3 flex items-center justify-center md:justify-start group w-full">
+                        <span class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gold mr-3 group-hover:bg-gold group-hover:text-white transition"><i class="fas fa-phone-alt text-sm"></i></span>
+                        <a href="tel:0628655206" class="hover:text-gold transition font-bold">06 28 65 52 06</a>
+                    </p>
+                    <p class="mb-3 flex items-center justify-center md:justify-start group w-full">
+                        <span class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gold mr-3 group-hover:bg-gold group-hover:text-white transition"><i class="fas fa-envelope text-sm"></i></span>
+                        <a href="mailto:rochertraiteur@gmail.com" class="hover:text-gold transition font-bold">rochertraiteur@gmail.com</a>
+                    </p>
+                    
+                    <a href="formulaire.html" class="mt-4 inline-block bg-dark text-white border border-dark px-6 py-2 uppercase tracking-widest text-xs font-bold hover:bg-gold hover:border-gold transition duration-300 rounded">
+                        Formulaire de contact
+                    </a>
+                </div>
+
+                <div class="flex flex-col items-center justify-center w-full md:items-start md:pl-10">
+                    <h4 class="text-xl font-serif font-bold mb-6 text-gold border-b border-gray-100 pb-2 inline-block md:block">Suivez-nous</h4>
+                    
+                    <div class="space-y-4 w-full max-w-xs mx-auto md:mx-0">
+                        <div class="flex items-center space-x-4 bg-gray-50 p-4 rounded-lg border border-gray-100">
+                            <a href="https://instagram.com/m.rocher2022" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-dark flex items-center justify-center text-white hover:bg-gold hover:text-dark transition shadow-lg transform hover:scale-110 duration-300" aria-label="Suivez-nous sur Instagram">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <div class="text-left">
+                                <span class="block font-bold text-dark">Instagram</span>
+                                <a href="https://instagram.com/m.rocher2022" target="_blank" rel="noopener noreferrer" class="text-gray-500 text-sm hover:text-gold transition">@m.rocher2022</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-4 bg-gray-50 p-4 rounded-lg border border-gray-100">
+                            <a href="https://www.facebook.com/p/MRocher-100087912335771/?locale=fr_FR" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-dark flex items-center justify-center text-white hover:bg-gold hover:text-dark transition shadow-lg transform hover:scale-110 duration-300" aria-label="Suivez-nous sur Facebook">
+                                <i class="fab fa-facebook-f text-xl"></i>
+                            </a>
+                            <div class="text-left">
+                                <span class="block font-bold text-dark">Facebook</span>
+                                <a href="https://www.facebook.com/p/MRocher-100087912335771/?locale=fr_FR" target="_blank" rel="noopener noreferrer" class="text-gray-500 text-sm hover:text-gold transition">Maison Rocher</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="border-t border-gray-200 mt-16 pt-8 flex flex-col items-center gap-4 text-center text-gray-400 text-xs uppercase tracking-widest">
+                <div class="flex flex-wrap justify-center gap-4 md:gap-8 mb-2">
+                    <a href="mentions.html" class="hover:text-gold transition text-gold">Mentions légales</a>
+                    <a href="cgv.html" class="hover:text-gold transition">CGV</a>
+                    <a href="politique.html" class="hover:text-gold transition">Politique de confidentialité</a>
+                </div>
+                <p>&copy; 2026 Maison Rocher. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const links = document.querySelectorAll('.mobile-link');
+
+            if (btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                    if (!menu.classList.contains('hidden')) {
+                         const firstLink = menu.querySelector('a');
+                         if(firstLink) firstLink.focus();
+                    }
+                });
+                links.forEach(link => {
+                    link.addEventListener('click', () => {
+                        menu.classList.add('hidden');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
