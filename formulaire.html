@@ -130,7 +130,15 @@
 
             <div class="bg-white p-6 md:p-10 shadow-xl border-t-4 border-gold rounded-sm relative">
                 
-                <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+                <!-- Message de succès (Caché par défaut) -->
+                <div id="form-result" class="hidden text-center py-10 animate-fade-in-up">
+                    <i class="fas fa-check-circle text-5xl text-green-500 mb-4"></i>
+                    <h2 class="text-2xl font-serif font-bold text-dark mb-2">Message envoyé !</h2>
+                    <p class="text-gray-600 mb-8">Merci pour votre demande. Nous l'avons bien reçue et nous vous recontacterons dans les plus brefs délais.</p>
+                    <a href="index.html" class="inline-block bg-dark text-white px-8 py-3 uppercase tracking-widest text-xs font-bold hover:bg-gold transition duration-300 rounded-sm">Retour à l'accueil</a>
+                </div>
+
+                <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
                     
                     <input type="hidden" name="access_key" value="22494116-2818-4c24-8c41-065e473a93fc">
 
@@ -210,9 +218,10 @@
                     </div>
 
                     <div class="pt-4">
-                        <button type="submit" 
+                        <button type="submit" id="submit-button"
                                 class="w-full md:w-auto md:px-12 py-4 bg-dark text-white uppercase tracking-widest text-sm font-bold hover:bg-gold transition duration-300 rounded-sm shadow-md flex items-center justify-center mx-auto">
-                            <i class="far fa-paper-plane mr-3"></i> Envoyer ma demande
+                            <i id="submit-icon" class="far fa-paper-plane mr-3"></i> 
+                            <span id="submit-text">Envoyer ma demande</span>
                         </button>
                     </div>
 
@@ -309,6 +318,67 @@
                         menu.classList.add('hidden');
                     });
                 });
+            }
+
+            // ============================================
+            // GESTION DU FORMULAIRE WEB3FORMS (SANS REDIRECTION)
+            // ============================================
+            const form = document.getElementById('contact-form');
+            const resultMessage = document.getElementById('form-result');
+            const submitBtn = document.getElementById('submit-button');
+            const submitText = document.getElementById('submit-text');
+            const submitIcon = document.getElementById('submit-icon');
+
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Passage en état "Chargement"
+                    submitBtn.disabled = true;
+                    submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+                    submitText.innerText = 'Envoi en cours...';
+                    submitIcon.className = 'fas fa-circle-notch fa-spin mr-3';
+
+                    const formData = new FormData(form);
+                    const object = Object.fromEntries(formData);
+                    const json = JSON.stringify(object);
+
+                    fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: json
+                    })
+                    .then(async (response) => {
+                        let json = await response.json();
+                        if (response.status == 200) {
+                            // Succès : on cache le formulaire et on affiche le message de validation
+                            form.style.display = 'none';
+                            resultMessage.classList.remove('hidden');
+                        } else {
+                            // Erreur côté API
+                            console.log(response);
+                            resetButtonState();
+                            alert(json.message || "Une erreur est survenue lors de l'envoi.");
+                        }
+                    })
+                    .catch(error => {
+                        // Erreur de connexion / réseau
+                        console.log(error);
+                        resetButtonState();
+                        alert("Une erreur inattendue est survenue. Veuillez réessayer.");
+                    });
+                });
+            }
+
+            // Fonction pour remettre le bouton à son état initial en cas d'erreur
+            function resetButtonState() {
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+                submitText.innerText = 'Envoyer ma demande';
+                submitIcon.className = 'far fa-paper-plane mr-3';
             }
         });
     </script>
